@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "469206881752",
+    "firebase_url": "https://void-chat-ffca4.firebaseio.com",
+    "project_id": "void-chat-ffca4",
+    "storage_bucket": "void-chat-ffca4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469206881752:android:fcffe10a2baa6c22d1cead",
+        "android_client_info": {
+          "package_name": "chat.void.software"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469206881752-pmgpe4v3jjgjtr04gg8e4v7nldjvs453.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMp9Ye4-Mq-VYvejT5h0MPMxEV1Qy4NM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469206881752-pmgpe4v3jjgjtr04gg8e4v7nldjvs453.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

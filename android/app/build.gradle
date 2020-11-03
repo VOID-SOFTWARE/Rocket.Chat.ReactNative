@@ -171,10 +171,14 @@ android {
         }
     }
     buildTypes {
+        debug {
+            resValue "string", "rn_config_reader_custom_package", "chat.rocket.reactnative"
+        }
         release {
             minifyEnabled enableProguardInReleaseBuilds
             setProguardFiles([getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'])
             signingConfig signingConfigs.release
+            resValue "string", "rn_config_reader_custom_package", "chat.rocket.reactnative"
             if (isPlay) {
                 firebaseCrashlytics {
                     nativeSymbolUploadEnabled true
