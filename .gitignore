@@ -65,3 +65,4 @@ e2e/docker/data/db
 
 google-services.json
 GoogleService-info.plist
+*.p8
