@@ -11,7 +11,6 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <MMKV/MMKV.h>
-#import <Firebase.h>
 
 #import <React/RCTBridgeDelegate.h>
 #import <UMCore/UMModuleRegistry.h>
@@ -28,10 +27,6 @@ RCT_EXPORT_MODULE();
 
 - (UIView*) shareView {
   NSURL *jsCodeLocation;
-  
-  if(![FIRApp defaultApp]){
-    [FIRApp configure];
-  }
   
   self.moduleRegistryAdapter = [[UMModuleRegistryAdapter alloc] initWithModuleRegistryProvider:[[UMModuleRegistryProvider alloc] init]];
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];

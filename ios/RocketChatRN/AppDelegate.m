@@ -16,7 +16,6 @@
 #import "RNNotifications.h"
 #import "RNBootSplash.h"
 #import "Orientation.h"
-#import <Firebase.h>
 #import <UMCore/UMModuleRegistry.h>
 #import <UMReactNativeAdapter/UMNativeModulesProxy.h>
 #import <UMReactNativeAdapter/UMModuleRegistryAdapter.h>
@@ -50,9 +49,6 @@ static void InitializeFlipper(UIApplication *application) {
 
     self.moduleRegistryAdapter = [[UMModuleRegistryAdapter alloc] initWithModuleRegistryProvider:[[UMModuleRegistryProvider alloc] init]];
     RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
-    if(![FIRApp defaultApp]){
-      [FIRApp configure];
-    }
     RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                 moduleName:@"RocketChatRN"
                                                 initialProperties:nil];
