@@ -11,7 +11,7 @@ import * as List from '../containers/List';
 import I18n from '../i18n';
 import { CRASH_REPORT_KEY, ANALYTICS_EVENTS_KEY } from '../lib/rocketchat';
 import {
-	loggerConfig, logEvent, events
+	logEvent, events
 } from '../utils/log';
 import SafeAreaView from '../containers/SafeAreaView';
 import { isFDroidBuild } from '../constants/environment';
@@ -41,12 +41,7 @@ class SecurityPrivacyView extends React.Component {
 		const { toggleCrashReport } = this.props;
 		toggleCrashReport(value);
 		if (!isFDroidBuild) {
-			loggerConfig.autoNotify = value;
-			if (value) {
-				loggerConfig.clearBeforeSendCallbacks();
-			} else {
-				loggerConfig.registerBeforeSendCallback(() => false);
-			}
+			
 		}
 	}
 

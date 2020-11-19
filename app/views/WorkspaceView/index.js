@@ -14,7 +14,7 @@ import { getShowLoginButton } from '../../selectors/login';
 
 class WorkspaceView extends React.Component {
 	static navigationOptions = () => ({
-		title: I18n.t('Your_workspace')
+		title: I18n.t('sss')
 	})
 
 	static propTypes = {
