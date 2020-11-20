@@ -41,7 +41,7 @@ class SecurityPrivacyView extends React.Component {
 		const { toggleCrashReport } = this.props;
 		toggleCrashReport(value);
 		if (!isFDroidBuild) {
-			
+
 		}
 	}
 
@@ -110,27 +110,6 @@ class SecurityPrivacyView extends React.Component {
 						/>
 						<List.Separator />
 					</List.Section>
-
-					{!isFDroidBuild ? (
-						<>
-							<List.Section>
-								<List.Separator />
-								<List.Item
-									title='Log_analytics_events'
-									testID='security-privacy-view-analytics-events'
-									right={() => this.renderAnalyticsEventsSwitch()}
-								/>
-								<List.Separator />
-								<List.Item
-									title='Send_crash_report'
-									testID='security-privacy-view-crash-report'
-									right={() => this.renderCrashReportSwitch()}
-								/>
-								<List.Separator />
-								<List.Info info='Crash_report_disclaimer' />
-							</List.Section>
-						</>
-					) : null}
 				</List.Container>
 			</SafeAreaView>
 		);

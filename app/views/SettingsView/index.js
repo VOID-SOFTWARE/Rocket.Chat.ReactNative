@@ -200,35 +200,10 @@ class SettingsView extends React.Component {
 					<List.Section>
 						<List.Separator />
 						<List.Item
-							title='Contact_us'
-							onPress={this.sendEmail}
-							showActionIndicator
-							testID='settings-view-contact'
-						/>
-						<List.Separator />
-						<List.Item
 							title='Language'
 							onPress={() => this.navigateToScreen('LanguageView')}
 							showActionIndicator
 							testID='settings-view-language'
-						/>
-						<List.Separator />
-						{!isFDroidBuild ? (
-							<>
-								<List.Item
-									title='Review_this_app'
-									showActionIndicator
-									onPress={onReviewPress}
-									testID='settings-view-review-app'
-								/>
-							</>
-						) : null}
-						<List.Separator />
-						<List.Item
-							title='Share_this_app'
-							showActionIndicator
-							onPress={this.shareApp}
-							testID='settings-view-share-app'
 						/>
 						<List.Separator />
 						<List.Item
@@ -255,13 +230,6 @@ class SettingsView extends React.Component {
 					</List.Section>
 
 					<List.Section>
-						<List.Separator />
-						<List.Item
-							title='License'
-							onPress={this.onPressLicense}
-							showActionIndicator
-							testID='settings-view-license'
-						/>
 						<List.Separator />
 						<List.Item
 							title={I18n.t('Version_no', { version: getReadableVersion })}
