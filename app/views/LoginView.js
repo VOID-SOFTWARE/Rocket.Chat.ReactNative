@@ -50,8 +50,7 @@ const styles = StyleSheet.create({
 
 class LoginView extends React.Component {
 	static navigationOptions = ({ route, navigation }) => ({
-		title: route.params?.title ?? 'Rocket.Chat',
-		headerRight: () => <HeaderButton.Legal testID='login-view-more' navigation={navigation} />
+		title: route.params?.title ?? 'Void Chat'
 	})
 
 	static propTypes = {
@@ -174,29 +173,7 @@ class LoginView extends React.Component {
 					theme={theme}
 					style={styles.loginButton}
 				/>
-				{Accounts_PasswordReset && (
-					<Button
-						title={I18n.t('Forgot_password')}
-						type='secondary'
-						onPress={this.forgotPassword}
-						testID='login-view-forgot-password'
-						theme={theme}
-						color={themes[theme].auxiliaryText}
-						fontSize={14}
-					/>
-				)}
-				{this.showRegistrationButton ? (
-					<View style={styles.bottomContainer}>
-						<Text style={[styles.bottomContainerText, { color: themes[theme].auxiliaryText }]}>{I18n.t('Dont_Have_An_Account')}</Text>
-						<Text
-							style={[styles.bottomContainerTextBold, { color: themes[theme].actionTintColor }]}
-							onPress={this.register}
-							testID='login-view-register'
-						>{I18n.t('Create_account')}
-						</Text>
-					</View>
-				) : (<Text style={[styles.registerDisabled, { color: themes[theme].auxiliaryText }]}>{Accounts_RegistrationForm_LinkReplacementText}</Text>)}
-			</>
+				</>
 		);
 	}
 
